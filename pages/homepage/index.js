@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -13,27 +14,36 @@ export default function HomePage() {
         style={{ backgroundImage: "url('/background.jpg')" }} // เปลี่ยนภาพตาม path ที่ใช้จริง
       >
         {/* เมนูด้านซ้ายบน */}
-        {/* <div className="absolute top-6 left-6 text-white space-y-2 text-sm tracking-wider">
-          <div>CUSTOMER</div>
-          <div>SERVICES</div>
-          <div>CONTACT US</div>
-        </div> */}
+        <div className="absolute top-6 left-10 text-white space-y-2 text-sm tracking-wider ">
+        <Image
+        src="/mini-logo.png"
+        width={75}
+        height={75}
+        alt='Mini Logo'
+        />
+          <a href='#'>CUSTOMER</a><br></br>
+          <a href='#'> SERVICES</a><br></br>
+          <a href='#'> CONTACT US</a>
+        </div>
 
         {/* เมนูด้านขวาบน */}
-        {/* <div className="absolute top-6 right-6 text-white text-xs space-x-2 tracking-wider">
+        <div className="absolute top-6 right-6 text-black text-xs space-x-2 tracking-wider">
           <span>HOME</span> / 
           <span>VIEW CATALOGUE</span> / 
           <span>ABOUT US</span> / 
           <span>RING SIZE</span> / 
           <span>HOW TO MASSURE</span>
-        </div> */}
+        </div>
 
         {/* โลโก้ตรงกลาง */}
         <div className="flex flex-col items-center justify-center text-center min-h-screen">
-          <img
+          <Image
             src="/blueborn-logo.png"
             alt="Blue Born Logo"
+            width={700}
+            height={700}
             className="w-[700px] max-w-[70%]"
+
           />
 
           {/* ปุ่มสมัคร/เข้าสู่ระบบ */}
